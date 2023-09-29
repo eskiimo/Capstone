@@ -13,7 +13,7 @@ footer {
 
   justify-content: center;
 }
-img {
+.footer-img {
   min-width: 10rem;
   height: 100%;
   object-fit: contain;
