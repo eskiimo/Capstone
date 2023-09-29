@@ -15,7 +15,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#root {
-  display: grid;
-  grid-template-rows: 0.08fr 2fr 1fr 0.5fr;
+
+.headings {
+  font-size: 64px;
+}
+.sub-headings {
+  font-size: 38px;
+}
+.description {
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 25px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }

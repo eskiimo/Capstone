@@ -4,7 +4,10 @@ import "./footer.css";
 export default function Footer() {
   return (
     <footer>
-      <img alt="footer" src="/assets/images/restauranfood.jpg" />
+      <div className="img-container">
+        {" "}
+        <img alt="footer" src="/assets/images/restauranfood.jpg" />
+      </div>
       <ul>
         <h4>Doormat Navigation</h4>
         <li>Home</li>
