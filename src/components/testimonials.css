@@ -1,0 +1,16 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fbdabb;
+  padding: 3rem 8%;
+}
+
+.rate-card-container {
+  width: 100%;
+  margin: 10vh 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
+  justify-content: center;
+}

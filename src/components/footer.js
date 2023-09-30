@@ -6,11 +6,7 @@ export default function Footer() {
     <footer>
       <div className="img-container">
         {" "}
-        <img
-          className="footer-img"
-          alt="footer"
-          src="/assets/images/restauranfood.jpg"
-        />
+        <img className="footer-img" alt="footer" src="/assets/svgs/Logo.svg" />
       </div>
       <ul>
         <h4>Doormat Navigation</h4>

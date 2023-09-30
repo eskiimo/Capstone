@@ -1,8 +1,27 @@
+.highlights {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 8%;
+}
+
+.highlight-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 5vw;
+}
+
+.menu-btn {
+  background-color: #f4ce14;
+  font-weight: 500;
+}
+
 .specials {
-  padding: 10px 8%;
-  margin: 3rem 10%;
-  background-color: #fbdabb;
+  margin: 3rem 5vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
   gap: 2rem;
+  justify-items: center;
+  justify-content: center;
 }
