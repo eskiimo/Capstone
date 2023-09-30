@@ -1,0 +1,26 @@
+form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 5rem;
+
+  background-color: #333333;
+}
+input,
+select {
+  margin: 10px 10px 10px 0;
+  padding: 3px 10px;
+}
+label {
+  color: #edefee;
+}
+
+form button {
+  background-color: #f4ce14;
+  font-weight: 500;
+  margin: 10px 10px 10px 0;
+}
+
+form button:hover {
+  background-color: #fbdabb;
+}

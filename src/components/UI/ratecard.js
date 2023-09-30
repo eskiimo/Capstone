@@ -5,7 +5,7 @@ export default function RateCard(props) {
     let items = [];
     for (let i = 0; i < n; i++) {
       items.push(
-        <img className="star" alt="star" src="assets/images/star.png" />
+        <img key={i} className="star" alt="star" src="assets/images/star.png" />
       );
     }
     return items;

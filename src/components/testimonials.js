@@ -35,9 +35,10 @@ export default function Testimonials() {
     },
   ];
 
-  let rating_cards = rate.map((rating) => {
+  let rating_cards = rate.map((rating, index) => {
     return (
       <RateCard
+        key={index}
         n_stars={rating.rate}
         name={rating.name}
         username={rating.username}

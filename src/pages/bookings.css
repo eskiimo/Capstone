@@ -1,0 +1,22 @@
+.booking-page {
+  height: 70vh;
+  background-color: #495e57;
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 8%;
+}
+.booking-page .img-container {
+  width: 50%;
+  height: 100%;
+  background-image: url("../../public/assets/images/restaurant.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 40px solid #f4ce14;
+}
+
+.form-container {
+  width: 50%;
+  height: 100%;
+
+  border: 4px solid #f4ce14;
+}

@@ -25,6 +25,11 @@ nav {
     color: #ee9972;
   }
 }
+.navlink:last-child {
+  border: 1px solid #495e57;
+  padding: 5px;
+  border-radius: 16px;
+}
 
 #logo {
   width: 30%;
