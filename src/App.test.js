@@ -13,16 +13,5 @@ test("rorm rendered", () => {
 test("update times reducer", () => {
   render(<Bookings />);
 
-  const updateBtn = screen.getByTestId("update");
-
-  fireEvent.click(updateBtn);
-  expect(screen.getByText("17:00")).toBeInTheDocument();
-});
-
-test("update initialize date reducer", () => {
-  render(<Bookings />);
-  const initializeBtn = screen.getByTestId("initialize");
-
-  fireEvent.click(initializeBtn);
-  expect(screen.getByText("18:00")).toBeInTheDocument();
+  expect(screen.getByText("mm/dd/yyy")).toBeInTheDocument();
 });

@@ -1,9 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./form.css";
 
 export default function FormComponent(props) {
-  console.log(props.availableTimes.availableTimes);
-  const dateRef = useRef();
+  const [date, setDate] = useState("");
+
+  const changeDate = (e) => {
+    setDate(e.target.value);
+    props.checkDate(e.target.value);
+  };
   const timeRef = useRef();
   const guestsRef = useRef();
   const occRef = useRef();
@@ -11,7 +15,7 @@ export default function FormComponent(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let message = `you successfully booked a table for ${guestsRef.current.value}, On ${dateRef.current.value} , at ${timeRef.current.value}, for your ${occRef.current.value}`;
+    let message = `you successfully booked a table for ${guestsRef.current.value}, On ${date} , at ${timeRef.current.value}, for your ${occRef.current.value}`;
     console.log(message);
   };
 
@@ -22,10 +26,21 @@ export default function FormComponent(props) {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose date</label>
-      <input ref={dateRef} type="date" id="res-date" required />
+      <input
+        onChange={changeDate}
+        value={date}
+        type="date"
+        id="res-date"
+        required
+      />
+
       <label htmlFor="res-time">Choose time</label>
       <select ref={timeRef} id="res-time ">
-        {availableTimes}
+        {availableTimes.length > 0 ? (
+          availableTimes
+        ) : (
+          <option> no time available for this day</option>
+        )}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
