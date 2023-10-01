@@ -23,12 +23,12 @@ const fetchAPI = () => {
   let filteredDays = [];
   let today = date.getDay() + 1;
 
-  filteredDays = schedule.filter((item) => item.day === today);
+  filteredDays = schedule.filter((item) => parseInt(item.day) === today);
   for (var i = 0; i < filteredDays.length; i++) {
     result = [].concat(filteredDays[i].available);
   }
 
-  //   console.log("available times for today are : ", result);
+  console.log("available times for today are : ", result);
   return result;
 };
 

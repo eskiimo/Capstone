@@ -1,14 +1,18 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import "./bookings.css";
 import FormComponent from "../components/UI/form";
-import { fetchAPI } from "../utils/api";
 import { reducer_date } from "../utils/reducer";
 
 export default function Bookings() {
-  const initialTimes = {
-    availableTimes: fetchAPI() || ["00:00"],
-  };
-  const [state, dispatch] = useReducer(reducer_date, initialTimes);
+  const [state, dispatch] = useReducer(reducer_date, {
+    availableTimes: ["00:00"], // Initialize with a default value
+  });
+
+  useEffect(() => {
+    dispatch({
+      type: "initializeTimes",
+    });
+  }, []); // Empty dependency array to run the effect once on mount
 
   // eslint-disable-next-line no-unused-vars
   const updateTimes = (date) => {
@@ -18,12 +22,7 @@ export default function Bookings() {
         date: date,
       },
     });
-    // console.log(state);
   };
-
-  // const initializeTimes = () => {
-  //   dispatch({ type: "initializeTimes" });
-  // };
 
   return (
     <div className="booking-page">

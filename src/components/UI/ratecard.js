@@ -16,6 +16,7 @@ export default function RateCard(props) {
       <div className="rate-stars">{stars(props.n_stars)}</div>
       <div className="user">
         <img
+          aria-label="avatar"
           className="avatar"
           alt="avatar"
           src="assets/images/Mario and Adrian b.jpg"
